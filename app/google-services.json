@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "843910553886",
+    "project_id": "health-care-afe90",
+    "storage_bucket": "health-care-afe90.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843910553886:android:d0332212d465493138690f",
+        "android_client_info": {
+          "package_name": "com.ensias.healthcareapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWq-Eiv_tHSTw9N1GbRZ6FydnX2ey7Mi8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

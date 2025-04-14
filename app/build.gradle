@@ -1,0 +1,82 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.ensias.healthcareapp'
+    compileSdkVersion 34
+    viewBinding {
+        enabled = true
+    }
+
+    defaultConfig {
+        applicationId "com.ensias.healthcareapp"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    // AndroidX and UI
+    implementation 'androidx.appcompat:appcompat:1.7.0-alpha01'
+    implementation 'androidx.recyclerview:recyclerview:1.3.1'
+    implementation 'androidx.viewpager2:viewpager2:1.1.0-beta01'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.material:material:1.13.0-alpha02'
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Firebase
+    implementation 'com.google.firebase:firebase-auth:22.0.0'
+    implementation 'com.google.firebase:firebase-database:20.2.1'
+    implementation 'com.google.firebase:firebase-firestore:24.8.0'
+    implementation 'com.google.firebase:firebase-storage:20.3.0'
+    implementation 'com.firebaseui:firebase-ui-firestore:8.0.2'
+    implementation 'com.firebaseui:firebase-ui-storage:8.0.2'
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+    implementation 'com.google.firebase:firebase-appcheck:17.0.0'
+    implementation 'com.google.firebase:firebase-appcheck-debug:17.0.0' // Optional: useful for local testing
+
+
+    // Utils & UI Libraries
+    implementation 'com.squareup.picasso:picasso:2.8'
+    implementation 'com.jaredrummler:material-spinner:1.3.1'
+    /*new */implementation 'com.github.HedyHidouRy:HorizontalCalendar:1.00'
+    /*new */implementation 'com.github.vinaygopinath:StepView:2.0.1'
+
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
+    implementation 'io.github.pilgr:paperdb:2.7.2'
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    /*implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'*/
+}
