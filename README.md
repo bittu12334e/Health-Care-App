@@ -1,4 +1,4 @@
-## HealthCare App
+## CareConnect : HealthCare App
 A mobile application that facilitates making appointments and monitoring patients.
 
 ## 🤓 Authors
